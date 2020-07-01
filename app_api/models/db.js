@@ -13,4 +13,3 @@ mongoose.connection.on('disconnected', function () {
 require('../models/locations');
 
 
-
