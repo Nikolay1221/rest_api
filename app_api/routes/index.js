@@ -7,6 +7,9 @@ var postMess = require('../controllers/main');
 var getGps = require('../controllers/main');
 var postGps = require('../controllers/main');
 
+var getMicrophoneRecord = require('../controllers/main');
+var postMicrophoneRecord = require('../controllers/main');
+
 var getError = require('../controllers/main');
 var postError = require('../controllers/main');
     /* GET home page. */
@@ -16,8 +19,12 @@ router.post('/post_termux_battery_status', postMess.messp);
 router.get('/get_termux-location', getGps.getGpsfunc);
 router.post('/post_termux-location', postGps.postGpsfunc);
 
+router.get('/get_termux_microphone_record', getMicrophoneRecord.getMicrophoneRecordfunc);
+router.post('/post_termux_microphone_record', postMicrophoneRecord.postMicrophoneRecordfunc);
+
 router.get('/get_error', getError.getErrorfunc);
 router.post('/post_error', postError.postErrorfunc);
+
 
 
 

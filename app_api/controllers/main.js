@@ -74,3 +74,24 @@ module.exports.postErrorfunc = function(req, res){
             }
         });
 };
+
+var microphone_record_models = mongoose.model('microphone_record_models')
+
+module.exports.getMicrophoneRecordfunc = function(req, res){
+    microphone_record_models.find().exec(function(err, MicrophoneRecord){
+        sendJsonResponse(res, 200, MicrophoneRecord);
+    })
+};
+module.exports.postMicrophoneRecordfunc = function(req, res){
+    microphone_record_models.create({
+        File: req.body.File,
+        FileName: req.body.FileName,
+    },
+        function(err, MicrophoneRecord){
+            if (err) {
+                sendJsonResponse(res, 400, err);
+            }else{
+                sendJsonResponse(res, 201, MicrophoneRecord);
+            }
+        });
+};

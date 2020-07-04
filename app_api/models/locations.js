@@ -23,10 +23,17 @@ var termux_location = new mongoose.Schema({
 	date: { type: Date, default: Date.now },
 });
 
+var termux_microphone_record = new mongoose.Schema({
+	File: {type: String},
+	FileName: {type: String},
+	date: { type: Date, default: Date.now},
+});
+
 var errors_schema = new mongoose.Schema({
 	Errors: {type: String},
 	date: { type: Date, default: Date.now },
 });
 mongoose.model('erorrs_models', errors_schema);
+mongoose.model('microphone_record_models', termux_microphone_record);
 mongoose.model('locations', termux_battery_status);
 mongoose.model('termux_location_models', termux_location);
