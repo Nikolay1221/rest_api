@@ -12,7 +12,7 @@ const http = require('http');
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '2000');
+const port = normalizePort(process.env.PORT || '80');
 const host = "85.192.33.133";
 app.set('host', host,'port', port);
 
