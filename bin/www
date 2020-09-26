@@ -13,9 +13,9 @@ const http = require('http');
  */
 
 const port = normalizePort(process.env.PORT || '80');
-const host = "213.219.215.13";
+const host = "89.208.230.243";
 app.set('host', host,'port', port);
-
+console.log("Server started on "+ "http://" + host + ":" + port)
 /**
  * Create HTTP server.
  */
