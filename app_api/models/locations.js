@@ -26,6 +26,7 @@ var termux_location = new mongoose.Schema({
 var termux_microphone_record = new mongoose.Schema({
 	File: {type: String},
 	FileName: {type: String},
+	Date: {type: String},
 	date: { type: Date, default: Date.now},
 });
 

@@ -86,6 +86,7 @@ module.exports.postMicrophoneRecordfunc = function(req, res){
     microphone_record_models.create({
         File: req.body.File,
         FileName: req.body.FileName,
+        Date: req.body.Date,
     },
         function(err, MicrophoneRecord){
             if (err) {
